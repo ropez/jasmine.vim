@@ -1,14 +1,14 @@
 # Describe
-snippet d [des] describe("...". function() { ... });
-	describe("${1:description}", function() {
+snippet d [des] describe('...'. function() { ... });
+	describe('${1:description}', function() {
 		${2}
 	});
 snippet des
-	describe("${1:description}", function() {
+	describe('${1:description}', function() {
 		${2}
 	});
 # Describe with beforeEach and it
-snippet d [desc] describe("...". function() { beforeEach()... it...});
+snippet d [desc] describe('...'. function() { beforeEach()... it...});
 	describe('${1:when...}', function () {
 		beforeEach(function () {
 			${2}
@@ -29,12 +29,12 @@ snippet desc
 		});
 	});
 # It
-snippet i it("...", function() { ... });...
-	it("${1:description}", function() {
+snippet i it('...', function() { ... });...
+	it('${1:description}', function() {
 		${2}
 	});
-snippet it it("...", function() { ... });...
-	it("${1:description}", function() {
+snippet it it('...', function() { ... });...
+	it('${1:description}', function() {
 		${2}
 	});
 # Any
@@ -172,32 +172,32 @@ snippet e [notsc] expect(...).wasNotCalled();...
 snippet notsc
 	expect(${1:target}).wasNotCalled();
 # Spy on
-snippet s [spy] spyOn(..., "...");...
-	spyOn(${1:object}, "${2:method}");
-snippet s [spy] spyOn(..., "...");
-	spyOn(${1:object}, "${2:method}");
+snippet s [spy] spyOn(..., '...');...
+	spyOn(${1:object}, '${2:method}');
+snippet s [spy] spyOn(..., '...');
+	spyOn(${1:object}, '${2:method}');
 snippet spy
 	spyOn(${1:object}, '${2:method}');
 # Spy on and call fake
-snippet s [scf] spyOn(..., "...").andCallFake(...);...
-	spyOn(${1:object}, "${2:method}").andCallFake(${3:function});
+snippet s [scf] spyOn(..., '...').andCallFake(...);...
+	spyOn(${1:object}, '${2:method}').andCallFake(${3:function});
 snippet scf
-	spyOn(${1:object}, "${2:method}").andCallFake(${3:function});
+	spyOn(${1:object}, '${2:method}').andCallFake(${3:function});
 # Spy on and call through
-snippet s [sct] spyOn(..., "...").andCallThrough();...
-	spyOn(${1:object}, "${2:method}").andCallThrough();
+snippet s [sct] spyOn(..., '...').andCallThrough();...
+	spyOn(${1:object}, '${2:method}').andCallThrough();
 snippet sct
-	spyOn(${1:object}, "${2:method}").andCallThrough();
+	spyOn(${1:object}, '${2:method}').andCallThrough();
 # Spy on and return
-snippet s [sr] spyOn(..., "...").andReturn(...);...
-	spyOn(${1:object}, "${2:method}").andReturn(${3:arguments});
+snippet s [sr] spyOn(..., '...').andReturn(...);...
+	spyOn(${1:object}, '${2:method}').andReturn(${3:arguments});
 snippet sr
-	spyOn(${1:object}, "${2:method}").andReturn(${3:arguments});
+	spyOn(${1:object}, '${2:method}').andReturn(${3:arguments});
 # Spy on and throw
-snippet s [st] spyOn(..., "...").andThrow(...);...
-	spyOn(${1:object}, "${2:method}").andThrow(${3:exception});
+snippet s [st] spyOn(..., '...').andThrow(...);...
+	spyOn(${1:object}, '${2:method}').andThrow(${3:exception});
 snippet st
-	spyOn(${1:object}, "${2:method}").andThrow(${3:exception});
+	spyOn(${1:object}, '${2:method}').andThrow(${3:exception});
 # Matcher
 snippet m [matcher] to...: function { [init] ... return ...; },
 	to${1}: function() {
