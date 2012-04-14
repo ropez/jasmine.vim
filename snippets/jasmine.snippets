@@ -131,25 +131,25 @@ snippet e [em] expect(...).toMatch(...);...
 snippet em
 	expect(${1:subject}).toMatch(${2:pattern});
 # Expect was called with
-snippet e [escw] expect(...).wasCalledWith(...);...
-	expect(${1:subject}).wasCalledWith(${2:arguments});
+snippet e [escw] expect(...).toHaveBeenCalledWith(...);...
+	expect(${1:subject}).toHaveBeenCalledWith(${2:arguments});
 snippet escw
-	expect(${1:subject}).wasCalledWith(${2:arguments});
+	expect(${1:subject}).toHaveBeenCalledWith(${2:arguments});
 # Expect was called
-snippet e [esc] expect(...).wasCalled();...
-	expect(${1:subject}).wasCalled();
+snippet e [esc] expect(...).toHaveBeenCalled();...
+	expect(${1:subject}).toHaveBeenCalled();
 snippet esc
-	expect(${1:subject}).wasCalled();
+	expect(${1:subject}).toHaveBeenCalled();
 # Expect was not called with
-snippet e [notscw] expect(...).wasNotCalledWith(...);...
-	expect(${1:subject}).wasNotCalledWith(${2:arguments});
+snippet e [notscw] expect(...).not.toHaveBeenCalledWith(...);
+	expect(${1:subject}).not.toHaveBeenCalledWith(${2:arguments});
 snippet notscw
-	expect(${1:subject}).wasNotCalledWith(${2:arguments});
+	expect(${1:subject}).not.toHaveBeenCalledWith(${2:arguments});
 # Expect was not called
-snippet e [notsc] expect(...).wasNotCalled();...
-	expect(${1:subject}).wasNotCalled();
+snippet e [notsc] expect(...).not.toHaveBeenCalled();
+	expect(${1:subject}).not.toHaveBeenCalled();
 snippet notsc
-	expect(${1:subject}).wasNotCalled();
+	expect(${1:subject}).not.toHaveBeenCalled();
 # Spy on
 snippet s [spy] spyOn(..., '...');
 	spyOn(${1:object}, '${2:method}');
