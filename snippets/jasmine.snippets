@@ -7,27 +7,6 @@ snippet des
 	describe('${1:description}', function() {
 		${2}
 	});
-# Describe with beforeEach and it
-snippet d [desc] describe('...'. function() { beforeEach()... it...});
-	describe('${1:when...}', function () {
-		beforeEach(function () {
-			${2}
-		});
-
-		it('${3:should...}', function () {
-			expect(${4:condition}).toEqual(${5});
-		});
-	});
-snippet desc
-	describe('${1:when...}', function () {
-		beforeEach(function () {
-			${2}
-		});
-
-		it('${3:should...}', function () {
-			expect(${4:condition}).toEqual(${5});
-		});
-	});
 # It
 snippet i it('...', function() { ... });...
 	it('${1:description}', function() {
